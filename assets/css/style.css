@@ -7,16 +7,22 @@
 }
 
 .topic-btn {
-    margin: 30 5 30 5;
+    margin: 5px;
     background-color: black;
     color: white;
     font-size: 20pt;
+}
+
+#topic-input{
+    width: 100%;
+    border: solid 2pt black;
 }
 
 #add-topic {
     background-color: black;
     color: white;
     font-size: 15pt;
+    width: 100%;
 }
 
 #add-topic:hover {

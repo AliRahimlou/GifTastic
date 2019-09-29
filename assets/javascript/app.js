@@ -24,16 +24,22 @@ $(document).ready(function () {
          
             for (var i = 0; i < results.length; i++) {
 
-                if (results[i].rating !== "r" && results[i].rating !== "pg-13") {
+                if (results[i].rating !== "r") {
 
                     var rating = results[i].rating;
                     var imgUrl = results[i].images.fixed_height.url
+                    // var imgUrl = [imgAnimate,imgStill]
+                    // var imgAnimate = results[i].images.original.url
+                    // var imgStill = results[i].images.original_still.url
                     var image = $("<img>").attr("src", imgUrl);
                     var pRating = $("<p>").text("Rating: " + rating);
                     topicDiv.append(image);
                     topicDiv.append(pRating);
                     $("#topics-view").prepend(topicDiv);
+
+                    
                 }
+            
             }
 
         });
@@ -66,5 +72,7 @@ $(document).ready(function () {
     $(document).on("click", ".topic-btn", displaytopicInfo);
     renderButtons();
 
+  
+    
 
 });
